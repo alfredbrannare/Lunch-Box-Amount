@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    background-color: rgb(0, 132, 209);
+}
+
+header{
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 550px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+header h1{
+    font-size: 50px;
+}
+
+section{
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 550px;
+    margin: 5px auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#food{
+    display: grid;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+#food label{
+    font-size: 20px;
+}
+
+#food input{
+    text-align: center;
+    margin: 5px 0px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 100px;
+    font-size: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; 
+}
+
+#amount{
+    display: grid;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+#amount label{
+    font-size: 20px;
+}
+
+#amount input{
+    text-align: center;
+    margin: 5px 0px 0px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 100px;
+    font-size: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#addBtn{
+    background-color: rgb(93, 223, 81);
+    padding: 5px 50px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#displayAmount{
+    list-style: none;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    background-color: white;
+    padding: 10px 0px;
+    width: 550px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#displayAmount:empty{
+    background-color: transparent;
+    border: none;
+}
+
+.listFoodClass {
+    margin-bottom: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    background-color: #f9f9f9; 
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+}
+
+.listFoodClass span {
+    margin-right: 10px;
+    margin-left: auto;
+    text-align: center;
+}
+
+.delBtn{
+    background-color: red;
+    align-items: end;
+    text-align: center;
+    margin-left: auto;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.reduceBtn{
+    display: flex;
+    background-color: green;
+}
