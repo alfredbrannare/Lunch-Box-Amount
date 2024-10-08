@@ -104,8 +104,8 @@ section{
 }
 
 .listFoodClass {
-    margin-bottom: 10px;
-    border: 1px solid #ccc; 
+    padding-bottom: 10px;
+    border-top: 1px solid #ccc; 
     border-radius: 4px;
     background-color: #f9f9f9; 
     display: flex;
@@ -113,11 +113,11 @@ section{
     justify-content: space-evenly;
 }
 
-.listFoodClass span {
+/* .listFoodClass span {
     margin-right: 10px;
     margin-left: auto;
     text-align: center;
-}
+} */
 
 .delBtn{
     background-color: red;
@@ -128,7 +128,31 @@ section{
     border-radius: 5px;
 }
 
+.addGramsBtn{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin-right: 5px;
+    background-color: rgb(89, 226, 89);
+}
+
 .reduceBtn{
-    display: flex;
-    background-color: green;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin-left: 5px;
+    background-color: red;
+}
+
+.reduceInput{
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.listReduceClass{
+    border-bottom: 1px solid #ccc; 
+    background-color: #f9f9f9; 
+    padding-bottom: 10px;
 }

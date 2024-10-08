@@ -14,6 +14,7 @@ reduceInputs = document.querySelector("#reduceInputs");
 
 displayAmount = document.querySelector("#displayAmount");
 
+
 let foodID = 0;
 const foodStorage = [];
 
@@ -56,6 +57,9 @@ addBtn.addEventListener("click", function(){
     foodType.value = "";
     foodAmount.value = "";
 
+    const foodContainer = document.createElement("div");
+    foodContainer.classList.add("foodContainer");
+
     //Creating list and span elements for the DOM
     const listFood = document.createElement("li");
     listFood.classList.add("listFoodClass");
@@ -75,27 +79,38 @@ addBtn.addEventListener("click", function(){
     deleteBtn.classList.add("delBtn");
     deleteBtn.innerHTML = "X";
 
+    //Add or reduce input
     const reduceGramsInput = document.createElement("input");
-    reduceGramsInput.classList.add("reduceInput")
+    reduceGramsInput.type = "number";
+    reduceGramsInput.placeholder = "Type amount added/taken (g)";
+    reduceGramsInput.classList.add("reduceInput");
+    //Add or reduce button
     const reduceGramsBtn = document.createElement("button");
-    reduceGramsBtn.classList.add("reduceBtn")
+    reduceGramsBtn.innerHTML = "-";
+    reduceGramsBtn.classList.add("reduceBtn");
+    const addGramsBtn = document.createElement("button");
+    addGramsBtn.innerHTML = "+";
+    addGramsBtn.classList.add("addGramsBtn");
 
 
     listFood.appendChild(spanFood);
     listFood.appendChild(spanAmount);
-    listFood.appendChild(deleteBtn);
+    listReduce.appendChild(addGramsBtn);
     listReduce.appendChild(reduceGramsInput)
     listReduce.appendChild(reduceGramsBtn);
 
-    displayAmount.appendChild(listFood);
-    reduceInputs.appendChild(listReduce);
+    foodContainer.appendChild(listFood);
+    foodContainer.appendChild(deleteBtn);
+    foodContainer.appendChild(listReduce);
+
+    displayAmount.appendChild(foodContainer);
 
     //Delete button function
     deleteBtn.addEventListener("click", function(){
         const taskIndex = foodStorage.indexOf(foodObject);
         if (taskIndex > -1){
             foodStorage.splice(taskIndex, 1);
-            listFood.remove();
+            foodContainer.remove();
         }
 
     })
