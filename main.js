@@ -98,9 +98,9 @@ addBtn.addEventListener("click", function(){
     listReduce.appendChild(addGramsBtn);
     listReduce.appendChild(reduceGramsInput)
     listReduce.appendChild(reduceGramsBtn);
+    listReduce.appendChild(deleteBtn);
 
     foodContainer.appendChild(listFood);
-    foodContainer.appendChild(deleteBtn);
     foodContainer.appendChild(listReduce);
 
     displayAmount.appendChild(foodContainer);
@@ -113,5 +113,30 @@ addBtn.addEventListener("click", function(){
             foodContainer.remove();
         }
 
-    })
+    });
+
+    //Add or reduce grams button function
+    addGramsBtn.addEventListener("click", function(){
+        let currentAmount = Number(foodObject.foodGrams);
+        let addedAmount = Number (reduceGramsInput.value);
+
+        const newAddedAmount = currentAmount + addedAmount;
+
+        foodObject.foodGrams = newAddedAmount;
+
+        spanAmount.innerHTML = newAddedAmount + "(g)";
+        reduceGramsInput.value = "";
+    });
+
+    reduceGramsBtn.addEventListener("click", function(){
+        let currentAmount = Number(foodObject.foodGrams);
+        let reducedAmount = Number (reduceGramsInput.value)
+
+        const newReducedAmount = currentAmount - reducedAmount;
+
+        foodObject.foodGrams = newReducedAmount;
+
+        spanAmount.innerHTML = newReducedAmount + "(g)";
+        reduceGramsInput.value = "";
+    });
 });
