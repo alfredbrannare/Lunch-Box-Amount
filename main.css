@@ -121,11 +121,11 @@ section{
 
 .delBtn{
     background-color: red;
-    align-items: end;
     text-align: center;
-    margin-left: auto;
     width: 50px;
     border-radius: 5px;
+    margin-left: 150px;
+    padding: 5px;
 }
 
 .addGramsBtn{
@@ -156,3 +156,4 @@ section{
     background-color: #f9f9f9; 
     padding-bottom: 10px;
 }
+
